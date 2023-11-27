@@ -13,6 +13,7 @@
 		E12556952B14E878008B43E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12556932B14E878008B43E4 /* Main.storyboard */; };
 		E12556972B14E87A008B43E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12556962B14E87A008B43E4 /* Assets.xcassets */; };
 		E125569A2B14E87A008B43E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12556982B14E87A008B43E4 /* LaunchScreen.storyboard */; };
+		E12556B32B14F034008B43E4 /* Color Palette.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12556B22B14F034008B43E4 /* Color Palette.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E12556962B14E87A008B43E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E12556992B14E87A008B43E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E125569B2B14E87A008B43E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E12556B22B14F034008B43E4 /* Color Palette.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Color Palette.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		E125568C2B14E878008B43E4 /* CRED */ = {
 			isa = PBXGroup;
 			children = (
-				E125568D2B14E878008B43E4 /* AppDelegate.swift */,
-				E125568F2B14E878008B43E4 /* SceneDelegate.swift */,
-				E12556912B14E878008B43E4 /* ViewController.swift */,
-				E12556932B14E878008B43E4 /* Main.storyboard */,
-				E12556962B14E87A008B43E4 /* Assets.xcassets */,
-				E12556982B14E87A008B43E4 /* LaunchScreen.storyboard */,
+				E12556B02B14EEAC008B43E4 /* App Lifecycle */,
+				E12556AF2B14EE9D008B43E4 /* Modules */,
+				E12556B12B14EEBD008B43E4 /* Resources */,
 				E125569B2B14E87A008B43E4 /* Info.plist */,
 			);
 			path = CRED;
+			sourceTree = "<group>";
+		};
+		E12556AF2B14EE9D008B43E4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E12556912B14E878008B43E4 /* ViewController.swift */,
+				E12556932B14E878008B43E4 /* Main.storyboard */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E12556B02B14EEAC008B43E4 /* App Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				E125568D2B14E878008B43E4 /* AppDelegate.swift */,
+				E125568F2B14E878008B43E4 /* SceneDelegate.swift */,
+			);
+			path = "App Lifecycle";
+			sourceTree = "<group>";
+		};
+		E12556B12B14EEBD008B43E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E12556962B14E87A008B43E4 /* Assets.xcassets */,
+				E12556B22B14F034008B43E4 /* Color Palette.xcassets */,
+				E12556982B14E87A008B43E4 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12556B32B14F034008B43E4 /* Color Palette.xcassets in Resources */,
 				E125569A2B14E87A008B43E4 /* LaunchScreen.storyboard in Resources */,
 				E12556972B14E87A008B43E4 /* Assets.xcassets in Resources */,
 				E12556952B14E878008B43E4 /* Main.storyboard in Resources */,
