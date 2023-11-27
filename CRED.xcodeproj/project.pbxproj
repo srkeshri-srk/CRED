@@ -15,6 +15,8 @@
 		E12556B52B14F204008B43E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12556B42B14F204008B43E4 /* HomeViewController.swift */; };
 		E12556B72B14F20B008B43E4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E12556B62B14F20B008B43E4 /* Home.storyboard */; };
 		E12556B92B14F2A8008B43E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12556B82B14F2A8008B43E4 /* Constants.swift */; };
+		E12556BD2B14F332008B43E4 /* PlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12556BB2B14F332008B43E4 /* PlanCollectionViewCell.swift */; };
+		E12556BE2B14F332008B43E4 /* PlanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E12556B42B14F204008B43E4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E12556B62B14F20B008B43E4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E12556B82B14F2A8008B43E4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E12556BB2B14F332008B43E4 /* PlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCell.swift; sourceTree = "<group>"; };
+		E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,7 @@
 		E12556AF2B14EE9D008B43E4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				E12556B42B14F204008B43E4 /* HomeViewController.swift */,
-				E12556B62B14F20B008B43E4 /* Home.storyboard */,
+				E12556BA2B14F2FA008B43E4 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -95,6 +98,25 @@
 				E12556B82B14F2A8008B43E4 /* Constants.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E12556BA2B14F2FA008B43E4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E12556B42B14F204008B43E4 /* HomeViewController.swift */,
+				E12556B62B14F20B008B43E4 /* Home.storyboard */,
+				E12556BF2B14F336008B43E4 /* Collection Cells */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E12556BF2B14F336008B43E4 /* Collection Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E12556BB2B14F332008B43E4 /* PlanCollectionViewCell.swift */,
+				E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */,
+			);
+			path = "Collection Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E12556BE2B14F332008B43E4 /* PlanCollectionViewCell.xib in Resources */,
 				E12556B32B14F034008B43E4 /* Color Palette.xcassets in Resources */,
 				E12556B72B14F20B008B43E4 /* Home.storyboard in Resources */,
 				E125569A2B14E87A008B43E4 /* LaunchScreen.storyboard in Resources */,
@@ -171,6 +194,7 @@
 			files = (
 				E125568E2B14E878008B43E4 /* AppDelegate.swift in Sources */,
 				E12556902B14E878008B43E4 /* SceneDelegate.swift in Sources */,
+				E12556BD2B14F332008B43E4 /* PlanCollectionViewCell.swift in Sources */,
 				E12556B52B14F204008B43E4 /* HomeViewController.swift in Sources */,
 				E12556B92B14F2A8008B43E4 /* Constants.swift in Sources */,
 			);
