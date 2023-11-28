@@ -26,6 +26,8 @@
 		E1C9F4372B15F63D007DDDF5 /* CreditAmountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C9F4352B15F63D007DDDF5 /* CreditAmountTableViewCell.xib */; };
 		E1D3869C2B1624130066E83F /* ButtonClipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D3869A2B1624130066E83F /* ButtonClipTableViewCell.swift */; };
 		E1D3869D2B1624130066E83F /* ButtonClipTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D3869B2B1624130066E83F /* ButtonClipTableViewCell.xib */; };
+		E1D386A02B16281D0066E83F /* BankInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D3869E2B16281D0066E83F /* BankInfoTableViewCell.swift */; };
+		E1D386A12B16281D0066E83F /* BankInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D3869F2B16281D0066E83F /* BankInfoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		E1C9F4352B15F63D007DDDF5 /* CreditAmountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditAmountTableViewCell.xib; sourceTree = "<group>"; };
 		E1D3869A2B1624130066E83F /* ButtonClipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClipTableViewCell.swift; sourceTree = "<group>"; };
 		E1D3869B2B1624130066E83F /* ButtonClipTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonClipTableViewCell.xib; sourceTree = "<group>"; };
+		E1D3869E2B16281D0066E83F /* BankInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankInfoTableViewCell.swift; sourceTree = "<group>"; };
+		E1D3869F2B16281D0066E83F /* BankInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BankInfoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 				E18B3A9A2B16171A00302C96 /* PlansTableViewCell.xib */,
 				E1D3869A2B1624130066E83F /* ButtonClipTableViewCell.swift */,
 				E1D3869B2B1624130066E83F /* ButtonClipTableViewCell.xib */,
+				E1D3869E2B16281D0066E83F /* BankInfoTableViewCell.swift */,
+				E1D3869F2B16281D0066E83F /* BankInfoTableViewCell.xib */,
 			);
 			path = "Table Cell";
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 				E18B3A9C2B16171A00302C96 /* PlansTableViewCell.xib in Resources */,
 				E12556BE2B14F332008B43E4 /* PlanCollectionViewCell.xib in Resources */,
 				E1C9F4322B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard in Resources */,
+				E1D386A12B16281D0066E83F /* BankInfoTableViewCell.xib in Resources */,
 				E12556B32B14F034008B43E4 /* Color Palette.xcassets in Resources */,
 				E12556B72B14F20B008B43E4 /* Home.storyboard in Resources */,
 				E125569A2B14E87A008B43E4 /* LaunchScreen.storyboard in Resources */,
@@ -254,6 +261,7 @@
 				E1C9F4362B15F63D007DDDF5 /* CreditAmountTableViewCell.swift in Sources */,
 				E18B3A9B2B16171A00302C96 /* PlansTableViewCell.swift in Sources */,
 				E12556B52B14F204008B43E4 /* HomeViewController.swift in Sources */,
+				E1D386A02B16281D0066E83F /* BankInfoTableViewCell.swift in Sources */,
 				E1D3869C2B1624130066E83F /* ButtonClipTableViewCell.swift in Sources */,
 				E12556B92B14F2A8008B43E4 /* Constants.swift in Sources */,
 				E1C9F42D2B15ED6A007DDDF5 /* BaseViewController.swift in Sources */,

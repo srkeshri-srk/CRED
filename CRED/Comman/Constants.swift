@@ -25,6 +25,7 @@ struct Constants {
             static let creditAmountCell = "CreditAmountTableViewCell"
             static let plansCell = "PlansTableViewCell"
             static let buttonClipCell = "ButtonClipTableViewCell"
+            static let bankInfoCell = "BankInfoTableViewCell"
         }
         
         struct CollectionView {

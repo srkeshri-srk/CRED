@@ -29,6 +29,7 @@ class ExpandAndCollapseViewController: BaseViewController {
         tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.creditAmountCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.creditAmountCell)
         tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.plansCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.plansCell)
         tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.buttonClipCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.buttonClipCell)
+        tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.bankInfoCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.bankInfoCell)
     }
     
 
@@ -36,7 +37,7 @@ class ExpandAndCollapseViewController: BaseViewController {
 
 extension ExpandAndCollapseViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,8 +47,11 @@ extension ExpandAndCollapseViewController: UITableViewDelegate, UITableViewDataS
         } else if indexPath.row == 1 {
             let cell: PlansTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.plansCell, for: indexPath) as! PlansTableViewCell
             return cell
-        } else {
+        } else if indexPath.row == 2 {
             let cell: ButtonClipTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.buttonClipCell, for: indexPath) as! ButtonClipTableViewCell
+            return cell
+        } else {
+            let cell: BankInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.bankInfoCell, for: indexPath) as! BankInfoTableViewCell
             return cell
         }
     }
