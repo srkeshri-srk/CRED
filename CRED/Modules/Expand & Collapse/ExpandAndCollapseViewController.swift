@@ -9,7 +9,12 @@ import UIKit
 
 class ExpandAndCollapseViewController: BaseViewController {
 
+    
+    @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var suggestionButton: UIButton!
+    
     @IBOutlet weak var tableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +25,8 @@ class ExpandAndCollapseViewController: BaseViewController {
     }
     
     private func setupUI() {
-        
+        dismissButton.layer.cornerRadius = dismissButton.bounds.size.height / 2
+        suggestionButton.layer.cornerRadius = suggestionButton.bounds.size.height / 2
     }
     
     private func registerTableView() {
@@ -32,6 +38,16 @@ class ExpandAndCollapseViewController: BaseViewController {
         tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.bankInfoCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.bankInfoCell)
     }
     
+    @IBAction func dismissButtonAction(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func suggestionButtonAction(_ sender: UIButton) {
+        let alert = UIAlertController(title: "B I N G O !!", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "DONE", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
 
 }
 

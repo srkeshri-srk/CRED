@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,29 +18,71 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yLG-tT-9Th">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="134" width="393" height="684"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="whe-Rh-0pX">
+                                <rect key="frame" x="25" y="74" width="343" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7f-Wb-DFQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="Eerie Black"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="P7f-Wb-DFQ" secondAttribute="height" multiplier="1:1" id="KQe-qa-06B"/>
+                                            <constraint firstAttribute="height" constant="40" id="tgs-xG-3m8"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="dismissButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="id6-Mo-Bmk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eN0-i4-Gb7">
+                                        <rect key="frame" x="303" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="Eerie Black"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eN0-i4-Gb7" secondAttribute="height" multiplier="1:1" id="INc-lo-ptB"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="questionmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="suggestionButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Zup-vo-fPZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yLG-tT-9Th" secondAttribute="trailing" id="3Mk-iW-AVN"/>
-                            <constraint firstItem="yLG-tT-9Th" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="O7s-Ve-e5u"/>
+                            <constraint firstItem="whe-Rh-0pX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="EmF-JG-4kI"/>
+                            <constraint firstItem="yLG-tT-9Th" firstAttribute="top" secondItem="whe-Rh-0pX" secondAttribute="bottom" constant="20" id="TlF-NV-VY1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="whe-Rh-0pX" secondAttribute="trailing" constant="25" id="VIz-mL-cIW"/>
+                            <constraint firstItem="whe-Rh-0pX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="b8y-GY-XLA"/>
                             <constraint firstItem="yLG-tT-9Th" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kUI-WS-hz3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yLG-tT-9Th" secondAttribute="bottom" id="wkS-Qs-069"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dismissButton" destination="P7f-Wb-DFQ" id="CTZ-Jq-i8M"/>
+                        <outlet property="suggestionButton" destination="eN0-i4-Gb7" id="Z7c-aE-fks"/>
                         <outlet property="tableView" destination="yLG-tT-9Th" id="Rnp-Mt-The"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="4"/>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <image name="questionmark" catalog="system" width="94" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="Eerie Black">
+            <color red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
