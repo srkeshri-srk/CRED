@@ -21,12 +21,13 @@ class BankInfoTableViewCell: UITableViewCell {
     }
     
     private func setupUI() {
-        artworkImageView.layer.cornerRadius = 15.0
+        artworkImageView.layer.cornerRadius = 12.0
         artworkImageView.layer.masksToBounds = true
         
         selectionButton.layer.cornerRadius = selectionButton.bounds.size.height / 2
         selectionButton.layer.borderWidth = 1.0
         selectionButton.layer.borderColor = UIColor.gray.cgColor
+        selectionButton.layer.masksToBounds = true
         
         titleLabel.textColor = UIColor.white
         subTitleLabel.textColor = UIColor.white
