@@ -20,6 +20,8 @@
 		E1C9F42D2B15ED6A007DDDF5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C9F42C2B15ED6A007DDDF5 /* BaseViewController.swift */; };
 		E1C9F4302B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C9F42F2B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift */; };
 		E1C9F4322B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C9F4312B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard */; };
+		E1C9F4362B15F63D007DDDF5 /* CreditAmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C9F4342B15F63D007DDDF5 /* CreditAmountTableViewCell.swift */; };
+		E1C9F4372B15F63D007DDDF5 /* CreditAmountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C9F4352B15F63D007DDDF5 /* CreditAmountTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		E1C9F42C2B15ED6A007DDDF5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E1C9F42F2B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandAndCollapseViewController.swift; sourceTree = "<group>"; };
 		E1C9F4312B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpandAndCollapse.storyboard; sourceTree = "<group>"; };
+		E1C9F4342B15F63D007DDDF5 /* CreditAmountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditAmountTableViewCell.swift; sourceTree = "<group>"; };
+		E1C9F4352B15F63D007DDDF5 /* CreditAmountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditAmountTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +144,18 @@
 			children = (
 				E1C9F42F2B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift */,
 				E1C9F4312B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard */,
+				E1C9F4382B15F644007DDDF5 /* Table Cell */,
 			);
 			path = "Expand & Collapse";
+			sourceTree = "<group>";
+		};
+		E1C9F4382B15F644007DDDF5 /* Table Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E1C9F4342B15F63D007DDDF5 /* CreditAmountTableViewCell.swift */,
+				E1C9F4352B15F63D007DDDF5 /* CreditAmountTableViewCell.xib */,
+			);
+			path = "Table Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +222,7 @@
 				E12556B72B14F20B008B43E4 /* Home.storyboard in Resources */,
 				E125569A2B14E87A008B43E4 /* LaunchScreen.storyboard in Resources */,
 				E12556972B14E87A008B43E4 /* Assets.xcassets in Resources */,
+				E1C9F4372B15F63D007DDDF5 /* CreditAmountTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +237,7 @@
 				E12556902B14E878008B43E4 /* SceneDelegate.swift in Sources */,
 				E12556BD2B14F332008B43E4 /* PlanCollectionViewCell.swift in Sources */,
 				E1C9F4302B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift in Sources */,
+				E1C9F4362B15F63D007DDDF5 /* CreditAmountTableViewCell.swift in Sources */,
 				E12556B52B14F204008B43E4 /* HomeViewController.swift in Sources */,
 				E12556B92B14F2A8008B43E4 /* Constants.swift in Sources */,
 				E1C9F42D2B15ED6A007DDDF5 /* BaseViewController.swift in Sources */,

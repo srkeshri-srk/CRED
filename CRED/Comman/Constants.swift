@@ -9,11 +9,18 @@ import UIKit
 
 
 struct Constants {
+    struct Color {
+        static let viewControllerBG: UIColor = .vampireBlack
+    }
+    
     struct Home {
         static let title = "CRED"
     }
     
-    struct Color {
-        static let viewControllerBG: UIColor = .vampireBlack
+    struct ExpandAndCollapse {
+        static let storyBoard = "ExpandAndCollapse"
+        static let identifierID = "ExpandAndCollapseViewController"
+        static let CreditAmountTableViewCell = "CreditAmountTableViewCell"
     }
+
 }
