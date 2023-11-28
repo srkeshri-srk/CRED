@@ -26,8 +26,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="See calculations">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="seeCalculationsButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Yf7-WP-1US"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4gA-FS-Ngi">
                                 <rect key="frame" x="15" y="91.333333333333329" width="135" height="38.666666666666671"/>
@@ -41,12 +44,12 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for 12 months" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPM-dW-O56">
                                         <rect key="frame" x="0.0" y="23" width="135" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCn-CK-3Ue">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCn-CK-3Ue">
                                 <rect key="frame" x="15" y="30" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="2Gz-zV-sGt"/>
@@ -54,7 +57,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="checkmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="selectionButtonAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="1LB-Iz-X2g"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="Jacarta"/>
@@ -103,15 +108,17 @@
             </constraints>
             <size key="customSize" width="205" height="229"/>
             <connections>
-                <outlet property="planTopLabel" destination="MQR-LV-NtN" id="VDs-Py-lHE"/>
                 <outlet property="planView" destination="vbQ-Jz-bMh" id="c0N-gV-flH"/>
                 <outlet property="recommendedView" destination="dne-Yr-ahR" id="TUD-Qs-Wte"/>
+                <outlet property="seeCalculationsButton" destination="53s-5Q-wb2" id="VB6-cc-g5I"/>
+                <outlet property="selectionButton" destination="lCn-CK-3Ue" id="vMl-QH-xM5"/>
+                <outlet property="subTitleLabel" destination="HPM-dW-O56" id="Fip-vc-J7X"/>
+                <outlet property="titleLabel" destination="2IK-Jl-88v" id="3cu-Dg-gep"/>
             </connections>
             <point key="canvasLocation" x="257.25190839694653" y="82.394366197183103"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="checkmark.circle" catalog="system" width="128" height="123"/>
         <namedColor name="Jacarta">
             <color red="0.24313725490196078" green="0.20000000000000001" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
