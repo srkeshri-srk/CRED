@@ -18,6 +18,8 @@
 		E12556BD2B14F332008B43E4 /* PlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12556BB2B14F332008B43E4 /* PlanCollectionViewCell.swift */; };
 		E12556BE2B14F332008B43E4 /* PlanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */; };
 		E1C9F42D2B15ED6A007DDDF5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C9F42C2B15ED6A007DDDF5 /* BaseViewController.swift */; };
+		E1C9F4302B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C9F42F2B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift */; };
+		E1C9F4322B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C9F4312B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		E12556BB2B14F332008B43E4 /* PlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCell.swift; sourceTree = "<group>"; };
 		E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCollectionViewCell.xib; sourceTree = "<group>"; };
 		E1C9F42C2B15ED6A007DDDF5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E1C9F42F2B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandAndCollapseViewController.swift; sourceTree = "<group>"; };
+		E1C9F4312B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpandAndCollapse.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				E12556BA2B14F2FA008B43E4 /* Home */,
+				E1C9F42F2B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift */,
+				E1C9F4312B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -189,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E12556BE2B14F332008B43E4 /* PlanCollectionViewCell.xib in Resources */,
+				E1C9F4322B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard in Resources */,
 				E12556B32B14F034008B43E4 /* Color Palette.xcassets in Resources */,
 				E12556B72B14F20B008B43E4 /* Home.storyboard in Resources */,
 				E125569A2B14E87A008B43E4 /* LaunchScreen.storyboard in Resources */,
@@ -206,6 +213,7 @@
 				E125568E2B14E878008B43E4 /* AppDelegate.swift in Sources */,
 				E12556902B14E878008B43E4 /* SceneDelegate.swift in Sources */,
 				E12556BD2B14F332008B43E4 /* PlanCollectionViewCell.swift in Sources */,
+				E1C9F4302B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift in Sources */,
 				E12556B52B14F204008B43E4 /* HomeViewController.swift in Sources */,
 				E12556B92B14F2A8008B43E4 /* Constants.swift in Sources */,
 				E1C9F42D2B15ED6A007DDDF5 /* BaseViewController.swift in Sources */,

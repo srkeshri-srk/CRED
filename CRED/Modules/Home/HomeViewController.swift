@@ -28,8 +28,10 @@ class HomeViewController: BaseViewController {
         descriptionLabel.textColor = .white
     }
     
-    @IBAction func ctaButtonAction(_ sender: UIButton) {
-        print("Processing...")
+    @IBAction func ctaButtonAction(_ sender: UIButton) {        
+        let storyBoard = UIStoryboard(name: "ExpandAndCollapse", bundle: nil)
+        let expandAndCollapseViewController = storyBoard.instantiateViewController(withIdentifier: "ExpandAndCollapseViewController") as! ExpandAndCollapseViewController
+        self.present(expandAndCollapseViewController, animated: true)
     }
     
     
