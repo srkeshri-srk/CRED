@@ -15,10 +15,43 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1i9-of-9ou">
+                                <rect key="frame" x="40" y="668" width="313" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2oX-LB-CVU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="H E R E"/>
+                                <connections>
+                                    <action selector="ctaButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DLK-jq-8Tt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey! Do you wanna see something cool then click" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysq-Qv-0ux">
+                                <rect key="frame" x="30" y="371.66666666666669" width="333" height="196.33333333333331"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1i9-of-9ou" secondAttribute="bottom" constant="100" id="8Pf-rS-pN7"/>
+                            <constraint firstItem="1i9-of-9ou" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ESm-jX-JwT"/>
+                            <constraint firstItem="ysq-Qv-0ux" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="L1W-ZW-ssG"/>
+                            <constraint firstItem="ysq-Qv-0ux" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="ONG-nD-CFG"/>
+                            <constraint firstItem="1i9-of-9ou" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="YEK-xa-eX5"/>
+                            <constraint firstItem="1i9-of-9ou" firstAttribute="top" secondItem="ysq-Qv-0ux" secondAttribute="bottom" constant="100" id="fj9-M8-8RK"/>
+                            <constraint firstItem="ysq-Qv-0ux" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="iUf-Ih-8A5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bQg-1m-jzV"/>
+                    <connections>
+                        <outlet property="ctaButton" destination="1i9-of-9ou" id="hF1-12-BrI"/>
+                        <outlet property="descriptionLabel" destination="ysq-Qv-0ux" id="PLQ-e4-O9w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
