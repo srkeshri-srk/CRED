@@ -17,6 +17,7 @@
 		E12556B92B14F2A8008B43E4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12556B82B14F2A8008B43E4 /* Constants.swift */; };
 		E12556BD2B14F332008B43E4 /* PlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12556BB2B14F332008B43E4 /* PlanCollectionViewCell.swift */; };
 		E12556BE2B14F332008B43E4 /* PlanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */; };
+		E1C9F42D2B15ED6A007DDDF5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C9F42C2B15ED6A007DDDF5 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E12556B82B14F2A8008B43E4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E12556BB2B14F332008B43E4 /* PlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCell.swift; sourceTree = "<group>"; };
 		E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCollectionViewCell.xib; sourceTree = "<group>"; };
+		E1C9F42C2B15ED6A007DDDF5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				E12556B02B14EEAC008B43E4 /* App Lifecycle */,
 				E12556AF2B14EE9D008B43E4 /* Modules */,
+				E1C9F42E2B15ED70007DDDF5 /* Comman */,
 				E12556B12B14EEBD008B43E4 /* Resources */,
 				E125569B2B14E87A008B43E4 /* Info.plist */,
 			);
@@ -117,6 +120,14 @@
 				E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */,
 			);
 			path = "Collection Cells";
+			sourceTree = "<group>";
+		};
+		E1C9F42E2B15ED70007DDDF5 /* Comman */ = {
+			isa = PBXGroup;
+			children = (
+				E1C9F42C2B15ED6A007DDDF5 /* BaseViewController.swift */,
+			);
+			path = Comman;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 				E12556BD2B14F332008B43E4 /* PlanCollectionViewCell.swift in Sources */,
 				E12556B52B14F204008B43E4 /* HomeViewController.swift in Sources */,
 				E12556B92B14F2A8008B43E4 /* Constants.swift in Sources */,
+				E1C9F42D2B15ED6A007DDDF5 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
