@@ -20,7 +20,15 @@ struct Constants {
     struct ExpandAndCollapse {
         static let storyBoard = "ExpandAndCollapse"
         static let identifierID = "ExpandAndCollapseViewController"
-        static let CreditAmountTableViewCell = "CreditAmountTableViewCell"
+        
+        struct TableView {
+            static let creditAmountCell = "CreditAmountTableViewCell"
+            static let plansCell = "PlansTableViewCell"
+        }
+        
+        struct CollectionView {
+            static let planCell = "PlanCollectionViewCell"
+        }
     }
 
 }

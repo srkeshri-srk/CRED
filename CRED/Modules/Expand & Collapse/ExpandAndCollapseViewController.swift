@@ -26,7 +26,8 @@ class ExpandAndCollapseViewController: BaseViewController {
     private func registerTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: Constants.ExpandAndCollapse.CreditAmountTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.CreditAmountTableViewCell)
+        tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.creditAmountCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.creditAmountCell)
+        tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.plansCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.plansCell)
     }
 
     
@@ -35,15 +36,24 @@ class ExpandAndCollapseViewController: BaseViewController {
 
 extension ExpandAndCollapseViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: CreditAmountTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.CreditAmountTableViewCell, for: indexPath) as! CreditAmountTableViewCell
-        return cell
+        if indexPath.row == 1 {
+            let cell: CreditAmountTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.creditAmountCell, for: indexPath) as! CreditAmountTableViewCell
+            return cell
+        } else {
+            let cell: PlansTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.plansCell, for: indexPath) as! PlansTableViewCell
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        if indexPath.row == 1 {
+            return UITableView.automaticDimension
+        } else {
+            return 220.0
+        }
     }
 }

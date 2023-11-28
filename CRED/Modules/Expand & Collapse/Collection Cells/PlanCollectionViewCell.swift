@@ -13,6 +13,8 @@ class PlanCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var recommendedView: UIView!
     @IBOutlet weak var planTopLabel: UILabel!
     
+    let colorPalettes: [UIColor] = [.charlestonGreen, .cola, .crayola, .deer, .jacarta, .policeBlue]
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,6 +24,7 @@ class PlanCollectionViewCell: UICollectionViewCell {
     private func setupUI() {
         planView.layer.cornerRadius = 10.0
         planView.layer.masksToBounds = true
+        planView.backgroundColor = colorPalettes.randomElement() ?? .cola
 
         recommendedView.layer.cornerRadius = recommendedView.bounds.size.height / 2
         recommendedView.layer.masksToBounds = true
