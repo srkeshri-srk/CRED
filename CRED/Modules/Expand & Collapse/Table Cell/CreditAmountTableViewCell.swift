@@ -8,16 +8,20 @@
 import UIKit
 
 class CreditAmountTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var outerView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        setupUI()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    private func setupUI() {
+        outerView.layer.cornerRadius = 15.0
+        outerView.layer.masksToBounds = true
     }
+
     
 }
