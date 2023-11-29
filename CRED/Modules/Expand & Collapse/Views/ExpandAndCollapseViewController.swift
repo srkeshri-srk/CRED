@@ -133,10 +133,10 @@ class ExpandAndCollapseViewController: BaseViewController {
     
     
     @objc func ctaButtonAction() {
-        let vc = ExpandableTwoViewController()
-        vc.defaultHeight = 600
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: false)
+//        let vc = ExpandableTwoViewController()
+//        vc.defaultHeight = 600
+//        vc.modalPresentationStyle = .overCurrentContext
+//        self.present(vc, animated: false)
     }
     
     @objc func handleCloseAction() {
