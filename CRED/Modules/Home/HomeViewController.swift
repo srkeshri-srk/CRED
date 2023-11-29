@@ -29,10 +29,10 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func ctaButtonAction(_ sender: UIButton) {        
-        let expandAndCollapseViewController = ExpandAndCollapseViewController()
-        expandAndCollapseViewController.modalPresentationStyle = .fullScreen
-        self.present(expandAndCollapseViewController, animated: true)
+        let expandAndCollapseVC = ExpandAndCollapseViewController()
+        expandAndCollapseVC.modalPresentationStyle = .fullScreen
+        expandAndCollapseVC.viewModel.setupFirstVC()
+        self.present(expandAndCollapseVC, animated: true)
     }
-    
     
 }

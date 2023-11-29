@@ -10,24 +10,28 @@ import UIKit
 
 extension ExpandAndCollapseViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ExpandAndCollapseModel.TableView.allCases.count
+        return viewModel.cellTypes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
+        let cellType = viewModel.cellTypes[indexPath.row]
+        
+        switch cellType {
+        case .header(let info):
             let cell: HeaderTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.headerCell.rawValue, for: indexPath) as! HeaderTableViewCell
-            cell.configureUI(info: HeaderInfo(titleText: "Shreyansh, how much do you need?", subTitleText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis luctus augue."))
+            cell.configureUI(info: info)
             return cell
-        } else if indexPath.row == 1 {
+        case .creditAmount:
             let cell: CreditAmountTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.creditAmountCell.rawValue, for: indexPath) as! CreditAmountTableViewCell
             return cell
-        } else if indexPath.row == 2 {
-            let cell: ButtonClipTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.buttonClipCell.rawValue, for: indexPath) as! ButtonClipTableViewCell
-            return cell
-        } else if indexPath.row == 3 {
+        case .plans:
             let cell: PlansTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.plansCell.rawValue, for: indexPath) as! PlansTableViewCell
             return cell
-        } else {
+        case .buttonClip(let title):
+            let cell: ButtonClipTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.buttonClipCell.rawValue, for: indexPath) as! ButtonClipTableViewCell
+            cell.configureUI(title: title)
+            return cell
+        case .bankInfo:
             let cell: BankInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.bankInfoCell.rawValue, for: indexPath) as! BankInfoTableViewCell
             return cell
         }

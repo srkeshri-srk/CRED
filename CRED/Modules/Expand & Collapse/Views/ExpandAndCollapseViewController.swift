@@ -81,6 +81,8 @@ class ExpandAndCollapseViewController: BaseViewController {
     let maxDimmedAlpha: CGFloat = 0.6
     var containerViewHeightConstraint: NSLayoutConstraint?
     var containerViewBottomConstraint: NSLayoutConstraint?
+    var viewModel: ExpandAndCollapseProtocol = ExpandAndCollapseViewModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +90,7 @@ class ExpandAndCollapseViewController: BaseViewController {
         setupConstraints()
         registerTableView()
         setButtonTarget()
+//        viewModel.setupThirdVC()
     }
     
     override func viewWillLayoutSubviews() {
