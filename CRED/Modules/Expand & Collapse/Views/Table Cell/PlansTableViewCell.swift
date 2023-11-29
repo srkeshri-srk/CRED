@@ -7,9 +7,14 @@
 
 import UIKit
 
-class PlansTableViewCell: UITableViewCell {
+protocol PlansProtocol: AnyObject {
+    func finalCalulation(value: Float)
+}
+
+class PlansTableViewCell: UITableViewCell, PlanCalulationable {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    weak var delegation: PlansProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +32,11 @@ class PlansTableViewCell: UITableViewCell {
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: ExpandAndCollapseModel.CollectionView.planCell, bundle: nil), forCellWithReuseIdentifier: ExpandAndCollapseModel.CollectionView.planCell)
     }
+    
+    func seeCalulation(value: Float) {
+        delegation?.finalCalulation(value: value)
+    }
+    
 }
 
 extension PlansTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -36,6 +46,7 @@ extension PlansTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: PlanCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ExpandAndCollapseModel.CollectionView.planCell, for: indexPath) as! PlanCollectionViewCell
+        cell.delegate = self
         return cell
     }
     

@@ -54,7 +54,6 @@ class ExpandAndCollapseViewController: UIViewController {
     
     lazy var ctaButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Next", for: .normal)
         button.backgroundColor = .policeBlue
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0)
@@ -127,8 +126,8 @@ class ExpandAndCollapseViewController: UIViewController {
     }
     
     @objc func suggestionButtonAction() {
-        let alert = UIAlertController(title: "B I N G O !!", message: "", preferredStyle: .alert)
-        let action = UIAlertAction(title: "DONE", style: .cancel)
+        let alert = UIAlertController(title: "Lunch Break", message: "Sunday ko aa..hen.. \n Sunday ko mast naha dho ke aa!", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Okey?", style: .cancel)
         alert.addAction(action)
         self.present(alert, animated: true)
     }
@@ -165,6 +164,15 @@ extension ExpandAndCollapseViewController: ButtonClipable {
     func buttonTapAction() {
         let alert = UIAlertController(title: "Yaah Yaah I'm Alive 🥱", message: "Don't disturb me let me sleep 😴💤", preferredStyle: .alert)
         let action = UIAlertAction(title: "Good Night", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
+}
+
+extension ExpandAndCollapseViewController: PlansProtocol {
+    func finalCalulation(value: Float) {
+        let alert = UIAlertController(title: "Laa baba, 5 crore", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Nahi Dunga 😏", style: .cancel)
         alert.addAction(action)
         self.present(alert, animated: true)
     }

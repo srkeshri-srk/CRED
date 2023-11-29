@@ -28,6 +28,7 @@ extension ExpandAndCollapseViewController: UITableViewDelegate, UITableViewDataS
             return cell
         case .plans:
             let cell: PlansTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.plansCell.rawValue, for: indexPath) as! PlansTableViewCell
+            cell.delegation = self
             return cell
         case .buttonClip(let title):
             let cell: ButtonClipTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.buttonClipCell.rawValue, for: indexPath) as! ButtonClipTableViewCell

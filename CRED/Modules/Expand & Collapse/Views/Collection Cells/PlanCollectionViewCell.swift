@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol PlanCalulationable: AnyObject {
+    func seeCalulation(value: Float)
+}
+
 class PlanCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var planView: UIView!
@@ -17,6 +21,7 @@ class PlanCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var seeCalculationsButton: UIButton!
     
     let colorPalettes: [UIColor] = [.charlestonGreen, .cola, .crayola, .deer, .jacarta, .policeBlue]
+    weak var delegate: PlanCalulationable?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -49,7 +54,7 @@ class PlanCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func seeCalculationsButtonAction(_ sender: UIButton) {
-        //Handle for See calculations
+        delegate?.seeCalulation(value: 404)
     }
     
 }
