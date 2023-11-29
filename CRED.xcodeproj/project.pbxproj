@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E1175B272B17D16000F432FB /* ExpandAndCollapse+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1175B262B17D16000F432FB /* ExpandAndCollapse+TableView.swift */; };
+		E1175B2A2B17D31200F432FB /* ExpandAndCollapseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1175B292B17D31200F432FB /* ExpandAndCollapseViewModel.swift */; };
+		E1175B2D2B17D3AD00F432FB /* ExpandAndCollapseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1175B2C2B17D3AD00F432FB /* ExpandAndCollapseModel.swift */; };
 		E125568E2B14E878008B43E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125568D2B14E878008B43E4 /* AppDelegate.swift */; };
 		E12556902B14E878008B43E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125568F2B14E878008B43E4 /* SceneDelegate.swift */; };
 		E12556972B14E87A008B43E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12556962B14E87A008B43E4 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		E1175B262B17D16000F432FB /* ExpandAndCollapse+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpandAndCollapse+TableView.swift"; sourceTree = "<group>"; };
+		E1175B292B17D31200F432FB /* ExpandAndCollapseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandAndCollapseViewModel.swift; sourceTree = "<group>"; };
+		E1175B2C2B17D3AD00F432FB /* ExpandAndCollapseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandAndCollapseModel.swift; sourceTree = "<group>"; };
 		E125568A2B14E878008B43E4 /* CRED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRED.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E125568D2B14E878008B43E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E125568F2B14E878008B43E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		E1175B2B2B17D36600F432FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1175B292B17D31200F432FB /* ExpandAndCollapseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1175B2E2B17D42E00F432FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1175B2C2B17D3AD00F432FB /* ExpandAndCollapseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E12556812B14E878008B43E4 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +135,7 @@
 			children = (
 				E12556B02B14EEAC008B43E4 /* App Lifecycle */,
 				E12556AF2B14EE9D008B43E4 /* Modules */,
+				E188B5EF2B1752C000F11C7A /* ExpandableTwoViewController.swift */,
 				E1C9F42E2B15ED70007DDDF5 /* Comman */,
 				E12556B12B14EEBD008B43E4 /* Resources */,
 				E125569B2B14E87A008B43E4 /* Info.plist */,
@@ -127,7 +148,6 @@
 			children = (
 				E12556BA2B14F2FA008B43E4 /* Home */,
 				E1C9F4332B15F4AE007DDDF5 /* Expand & Collapse */,
-				E188B5EF2B1752C000F11C7A /* ExpandableTwoViewController.swift */,
 				E1175B252B17CF2B00F432FB /* Final Destination */,
 			);
 			path = Modules;
@@ -183,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				E1175B282B17D29200F432FB /* Views */,
+				E1175B2B2B17D36600F432FB /* ViewModel */,
+				E1175B2E2B17D42E00F432FB /* Model */,
 			);
 			path = "Expand & Collapse";
 			sourceTree = "<group>";
@@ -288,10 +310,12 @@
 				E1C9F4302B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift in Sources */,
 				E1C9F4362B15F63D007DDDF5 /* CreditAmountTableViewCell.swift in Sources */,
 				E18B3A9B2B16171A00302C96 /* PlansTableViewCell.swift in Sources */,
+				E1175B2D2B17D3AD00F432FB /* ExpandAndCollapseModel.swift in Sources */,
 				E12556B52B14F204008B43E4 /* HomeViewController.swift in Sources */,
 				E188B5F02B1752C000F11C7A /* ExpandableTwoViewController.swift in Sources */,
 				E1D386A02B16281D0066E83F /* BankInfoTableViewCell.swift in Sources */,
 				E188B5F82B1782F400F11C7A /* FinalViewController.swift in Sources */,
+				E1175B2A2B17D31200F432FB /* ExpandAndCollapseViewModel.swift in Sources */,
 				E188B5F52B176EF200F11C7A /* HeaderTableViewCell.swift in Sources */,
 				E1175B272B17D16000F432FB /* ExpandAndCollapse+TableView.swift in Sources */,
 				E1D3869C2B1624130066E83F /* ButtonClipTableViewCell.swift in Sources */,

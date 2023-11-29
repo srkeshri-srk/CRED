@@ -166,7 +166,7 @@ private extension ExpandAndCollapseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        Constants.ExpandAndCollapse.TableView.allCases.forEach { cell in
+        ExpandAndCollapseModel.TableView.allCases.forEach { cell in
             tableView.register(UINib(nibName: cell.rawValue, bundle: nil), forCellReuseIdentifier: cell.rawValue)
         }
     }

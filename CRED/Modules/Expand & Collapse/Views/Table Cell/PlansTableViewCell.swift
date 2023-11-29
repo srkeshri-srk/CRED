@@ -25,7 +25,7 @@ class PlansTableViewCell: UITableViewCell {
     private func registerCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: Constants.ExpandAndCollapse.CollectionView.planCell, bundle: nil), forCellWithReuseIdentifier: Constants.ExpandAndCollapse.CollectionView.planCell)
+        collectionView.register(UINib(nibName: ExpandAndCollapseModel.CollectionView.planCell, bundle: nil), forCellWithReuseIdentifier: ExpandAndCollapseModel.CollectionView.planCell)
     }
 }
 
@@ -35,7 +35,7 @@ extension PlansTableViewCell: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: PlanCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.ExpandAndCollapse.CollectionView.planCell, for: indexPath) as! PlanCollectionViewCell
+        let cell: PlanCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ExpandAndCollapseModel.CollectionView.planCell, for: indexPath) as! PlanCollectionViewCell
         return cell
     }
     
