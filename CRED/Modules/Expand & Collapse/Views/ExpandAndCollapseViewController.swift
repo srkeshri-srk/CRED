@@ -56,7 +56,7 @@ class ExpandAndCollapseViewController: UIViewController {
         let button = UIButton()
         button.backgroundColor = .policeBlue
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 17.0)
         button.layer.cornerRadius = 8
         button.clipsToBounds = true
         button.tag = 3
@@ -126,8 +126,8 @@ class ExpandAndCollapseViewController: UIViewController {
     }
     
     @objc func suggestionButtonAction() {
-        let alert = UIAlertController(title: "Lunch Break", message: "Sunday ko aa..hen.. \n Sunday ko mast naha dho ke aa!", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Okey?", style: .cancel)
+        let alert = UIAlertController(title: Constants.AlertMessage.Suggetion.title, message: Constants.AlertMessage.Suggetion.message, preferredStyle: .alert)
+        let action = UIAlertAction(title: Constants.AlertMessage.Suggetion.buttonTitle, style: .cancel)
         alert.addAction(action)
         self.present(alert, animated: true)
     }
@@ -162,8 +162,8 @@ extension ExpandAndCollapseViewController: CreditAmountable {
 
 extension ExpandAndCollapseViewController: ButtonClipable {
     func buttonTapAction() {
-        let alert = UIAlertController(title: "Yaah Yaah I'm Alive 🥱", message: "Don't disturb me let me sleep 😴💤", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Good Night", style: .cancel)
+        let alert = UIAlertController(title: Constants.AlertMessage.ClipButton.title, message: Constants.AlertMessage.ClipButton.message, preferredStyle: .alert)
+        let action = UIAlertAction(title: Constants.AlertMessage.ClipButton.buttonTitle, style: .cancel)
         alert.addAction(action)
         self.present(alert, animated: true)
     }
@@ -171,8 +171,8 @@ extension ExpandAndCollapseViewController: ButtonClipable {
 
 extension ExpandAndCollapseViewController: PlansProtocol {
     func finalCalulation(value: Float) {
-        let alert = UIAlertController(title: "Laa baba, 5 crore", message: "", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Nahi Dunga 😏", style: .cancel)
+        let alert = UIAlertController(title: Constants.AlertMessage.Plan.title, message: Constants.AlertMessage.Plan.message, preferredStyle: .alert)
+        let action = UIAlertAction(title:Constants.AlertMessage.Plan.buttonTitle, style: .cancel)
         alert.addAction(action)
         self.present(alert, animated: true)
     }

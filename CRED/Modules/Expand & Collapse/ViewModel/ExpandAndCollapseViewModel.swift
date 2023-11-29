@@ -32,11 +32,13 @@ enum TableCell {
 
 protocol ExpandAndCollapseProtocol {
     var cellTypes: [TableCell] { get set }
+    var ctaButtonTitle: String? { get set }
     var buttonTag: Int { get set }
 }
 
 class ExpandAndCollapseViewModel: ExpandAndCollapseProtocol {
     var cellTypes: [TableCell] = []
+    var ctaButtonTitle: String?
     var buttonTag: Int = 0 {
         didSet {
             setupNextUI()
@@ -45,31 +47,34 @@ class ExpandAndCollapseViewModel: ExpandAndCollapseProtocol {
 
     func setupNextUI() {
         if buttonTag == 3 {
-            setupFirstVC()
+            setupUIForFirstVC()
         } else if buttonTag == 2 {
-            setupSecondVC()
+            setupUIForSecondVC()
         } else {
-            setupThirdVC()
+            setupUIForThirdVC()
         }
     }
     
-    func setupFirstVC() {
+    func setupUIForFirstVC() {
         cellTypes.removeAll()
-        cellTypes.append(.header(HeaderInfo(titleText: "Shreyansh, how much do you need?", subTitleText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis luctus augue.")))
+        cellTypes.append(.header(Constants.ExpandAndCollapse.FirstView.headerInfo))
         cellTypes.append(.creditAmount)
+        ctaButtonTitle = Constants.ExpandAndCollapse.FirstView.ctaButtonTitle
     }
     
-    func setupSecondVC() {
+    func setupUIForSecondVC() {
         cellTypes.removeAll()
-        cellTypes.append(.header(HeaderInfo(titleText: "how do you wish to repay?", subTitleText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis luctus augue.")))
+        cellTypes.append(.header(Constants.ExpandAndCollapse.SecondView.headerInfo))
         cellTypes.append(.plans)
-        cellTypes.append(.buttonClip("create your own plan"))
+        cellTypes.append(.buttonClip(Constants.ExpandAndCollapse.SecondView.buttonClip))
+        ctaButtonTitle = Constants.ExpandAndCollapse.SecondView.ctaButtonTitle
     }
     
-    func setupThirdVC() {
+    func setupUIForThirdVC() {
         cellTypes.removeAll()
-        cellTypes.append(.header(HeaderInfo(titleText: "where should we send the money?", subTitleText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis luctus augue.")))
+        cellTypes.append(.header(Constants.ExpandAndCollapse.ThirdView.headerInfo))
         cellTypes.append(.bankInfo)
-        cellTypes.append(.buttonClip("change account"))
+        cellTypes.append(.buttonClip(Constants.ExpandAndCollapse.ThirdView.buttonClip))
+        ctaButtonTitle = Constants.ExpandAndCollapse.ThirdView.ctaButtonTitle
     }
 }

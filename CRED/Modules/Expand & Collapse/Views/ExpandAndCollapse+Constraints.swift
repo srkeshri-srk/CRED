@@ -13,11 +13,10 @@ extension ExpandAndCollapseViewController {
     func setupUI() {
         view.backgroundColor = .clear
         viewModel.buttonTag = ctaButton.tag
-        
+        ctaButton.setTitle(viewModel.ctaButtonTitle, for: .normal)
+
         dismissButton.layer.cornerRadius = dismissButton.bounds.size.height / 2
         suggestionButton.layer.cornerRadius = suggestionButton.bounds.size.height / 2
-        
-        ctaButton.setTitle("Process to EMI selection", for: .normal)
     }
     
     func setButtonTarget() {
