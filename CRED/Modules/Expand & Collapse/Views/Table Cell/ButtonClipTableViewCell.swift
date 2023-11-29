@@ -7,9 +7,14 @@
 
 import UIKit
 
+protocol ButtonClipable: AnyObject {
+    func buttonTapAction()
+}
+
 class ButtonClipTableViewCell: UITableViewCell {
     
     @IBOutlet weak var button: UIButton!
+    weak var delegate: ButtonClipable?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +36,7 @@ class ButtonClipTableViewCell: UITableViewCell {
     }
     
     @IBAction func buttonAction(_ sender: UIButton) {
-        //Handle Button Action
+        delegate?.buttonTapAction()
     }
     
 }

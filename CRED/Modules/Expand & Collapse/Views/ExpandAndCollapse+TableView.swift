@@ -24,6 +24,7 @@ extension ExpandAndCollapseViewController: UITableViewDelegate, UITableViewDataS
             return cell
         case .creditAmount:
             let cell: CreditAmountTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.creditAmountCell.rawValue, for: indexPath) as! CreditAmountTableViewCell
+            cell.delegate = self
             return cell
         case .plans:
             let cell: PlansTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.plansCell.rawValue, for: indexPath) as! PlansTableViewCell
@@ -31,6 +32,7 @@ extension ExpandAndCollapseViewController: UITableViewDelegate, UITableViewDataS
         case .buttonClip(let title):
             let cell: ButtonClipTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.buttonClipCell.rawValue, for: indexPath) as! ButtonClipTableViewCell
             cell.configureUI(title: title)
+            cell.delegate = self
             return cell
         case .bankInfo:
             let cell: BankInfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.bankInfoCell.rawValue, for: indexPath) as! BankInfoTableViewCell

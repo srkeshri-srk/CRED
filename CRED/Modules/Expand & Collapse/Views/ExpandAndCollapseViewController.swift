@@ -45,6 +45,7 @@ class ExpandAndCollapseViewController: UIViewController {
         tableView.dataSource = self
         tableView.backgroundColor = .clear
         tableView.allowsSelection = false
+        tableView.separatorStyle = .none
         tableView.showsHorizontalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -151,5 +152,20 @@ class ExpandAndCollapseViewController: UIViewController {
     
     @objc func handleCloseAction() {
         animateDismissView()
+    }
+}
+
+extension ExpandAndCollapseViewController: CreditAmountable {
+    func sliderValueChanged(value: CGFloat) {
+        print(value)
+    }
+}
+
+extension ExpandAndCollapseViewController: ButtonClipable {
+    func buttonTapAction() {
+        let alert = UIAlertController(title: "Yaah Yaah I'm Alive 🥱", message: "Don't disturb me let me sleep 😴💤", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Good Night", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
 }
