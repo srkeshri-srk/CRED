@@ -1,0 +1,36 @@
+//
+//  HeaderTableViewCell.swift
+//  CRED
+//
+//  Created by Shreyansh Raj  Keshri on 29/11/23.
+//
+
+import UIKit
+
+struct HeaderInfo {
+    let titleText: String
+    let subTitleText: String
+}
+
+class HeaderTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        
+        setupUI()
+    }
+    
+    private func setupUI() {
+        titleLabel.textColor = .white.withAlphaComponent(0.8)
+        subTitleLabel.textColor = .white.withAlphaComponent(0.6)
+    }
+    
+    func configureUI(info: HeaderInfo) {
+        titleLabel.text = info.titleText
+        subTitleLabel.text = info.subTitleText
+    }
+}
