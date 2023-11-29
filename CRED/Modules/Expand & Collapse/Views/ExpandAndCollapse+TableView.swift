@@ -39,10 +39,6 @@ extension ExpandAndCollapseViewController: UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 100.0
-        } else {
-            return UITableView.automaticDimension
-        }
+        return viewModel.cellTypes[indexPath.row].heightOfCell
     }
 }

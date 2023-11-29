@@ -137,7 +137,6 @@ class ExpandAndCollapseViewController: UIViewController {
         if sender.tag > 1 {
             let expandAndCollapseVC = ExpandAndCollapseViewController()
             expandAndCollapseVC.defaultHeight = defaultHeight - 100
-            expandAndCollapseVC.viewModel.setupSecondVC()
             expandAndCollapseVC.modalPresentationStyle = .overCurrentContext
             expandAndCollapseVC.buttonContainerStackView.isHidden = true
             expandAndCollapseVC.maxDimmedAlpha = maxDimmedAlpha - 0.1

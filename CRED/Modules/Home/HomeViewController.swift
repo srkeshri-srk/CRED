@@ -31,8 +31,6 @@ class HomeViewController: BaseViewController {
     @IBAction func ctaButtonAction(_ sender: UIButton) {        
         let expandAndCollapseVC = ExpandAndCollapseViewController()
         expandAndCollapseVC.modalPresentationStyle = .fullScreen
-        expandAndCollapseVC.viewModel.setupFirstVC()
-        
         // keep false animation will be handled in VC itself.
         self.present(expandAndCollapseVC, animated: false)
     }
