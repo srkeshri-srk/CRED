@@ -11,6 +11,7 @@ import UIKit
 struct Constants {
     struct Color {
         static let viewControllerBG: UIColor = .vampireBlack
+        static let containerView: UIColor = .lightBlack
     }
     
     struct Home {

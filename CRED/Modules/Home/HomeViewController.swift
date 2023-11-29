@@ -32,7 +32,9 @@ class HomeViewController: BaseViewController {
         let expandAndCollapseVC = ExpandAndCollapseViewController()
         expandAndCollapseVC.modalPresentationStyle = .fullScreen
         expandAndCollapseVC.viewModel.setupFirstVC()
-        self.present(expandAndCollapseVC, animated: true)
+        
+        // keep false animation will be handled in VC itself.
+        self.present(expandAndCollapseVC, animated: false)
     }
     
 }
