@@ -72,9 +72,9 @@ class ExpandableTwoViewController: BaseViewController {
     }
     
     private func registerTableView() {
-        tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.headerCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.headerCell)
-        tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.plansCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.plansCell)
-        tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.buttonClipCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.buttonClipCell)
+//        tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.headerCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.headerCell)
+//        tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.plansCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.plansCell)
+//        tableView.register(UINib(nibName: Constants.ExpandAndCollapse.TableView.buttonClipCell, bundle: nil), forCellReuseIdentifier: Constants.ExpandAndCollapse.TableView.buttonClipCell)
     }
         
     override func viewDidAppear(_ animated: Bool) {
@@ -159,10 +159,10 @@ class ExpandableTwoViewController: BaseViewController {
     
     //Actions
     @objc func presentModalController() {
-        let vc = ExpandableThreeViewController()
-        vc.defaultHeight = 480
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: false)
+//        let vc = ExpandableThreeViewController()
+//        vc.defaultHeight = 480
+//        vc.modalPresentationStyle = .overCurrentContext
+//        self.present(vc, animated: false)
     }
     
     @objc func handleCloseAction() {
@@ -178,18 +178,20 @@ extension ExpandableTwoViewController: UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell: HeaderTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.headerCell, for: indexPath) as! HeaderTableViewCell
-            cell.configureUI(info: HeaderInfo(titleText: "how do you wish to repay?", subTitleText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis luctus augue."))
-            return cell
-        } else if indexPath.row == 1 {
-            let cell: PlansTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.plansCell, for: indexPath) as! PlansTableViewCell
-            return cell
-        } else {
-            let cell: ButtonClipTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.buttonClipCell, for: indexPath) as! ButtonClipTableViewCell
-            cell.configureUI(title: "create your own plan")
-            return cell
-        }
+//        if indexPath.row == 0 {
+//            let cell: HeaderTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.headerCell, for: indexPath) as! HeaderTableViewCell
+//            cell.configureUI(info: HeaderInfo(titleText: "how do you wish to repay?", subTitleText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis luctus augue."))
+//            return cell
+//        } else if indexPath.row == 1 {
+//            let cell: PlansTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.plansCell, for: indexPath) as! PlansTableViewCell
+//            return cell
+//        } else {
+//            let cell: ButtonClipTableViewCell = tableView.dequeueReusableCell(withIdentifier: Constants.ExpandAndCollapse.TableView.buttonClipCell, for: indexPath) as! ButtonClipTableViewCell
+//            cell.configureUI(title: "create your own plan")
+//            return cell
+//        }
+        
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -21,12 +21,12 @@ struct Constants {
         static let storyBoard = "ExpandAndCollapse"
         static let identifierID = "ExpandAndCollapseViewController"
         
-        struct TableView {
-            static let creditAmountCell = "CreditAmountTableViewCell"
-            static let plansCell = "PlansTableViewCell"
-            static let buttonClipCell = "ButtonClipTableViewCell"
-            static let bankInfoCell = "BankInfoTableViewCell"
-            static let headerCell = "HeaderTableViewCell"
+        enum TableView: String, CaseIterable {
+            case creditAmountCell = "CreditAmountTableViewCell"
+            case plansCell = "PlansTableViewCell"
+            case buttonClipCell = "ButtonClipTableViewCell"
+            case bankInfoCell = "BankInfoTableViewCell"
+            case headerCell = "HeaderTableViewCell"
         }
         
         struct CollectionView {

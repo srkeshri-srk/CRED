@@ -29,9 +29,8 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func ctaButtonAction(_ sender: UIButton) {        
-        let storyBoard = UIStoryboard(name: Constants.ExpandAndCollapse.storyBoard, bundle: nil)
-        let expandAndCollapseViewController = storyBoard.instantiateViewController(withIdentifier: Constants.ExpandAndCollapse.identifierID) as! ExpandAndCollapseViewController
-//        expandAndCollapseViewController.modalPresentationStyle = .fullScreen
+        let expandAndCollapseViewController = ExpandAndCollapseViewController()
+        expandAndCollapseViewController.modalPresentationStyle = .fullScreen
         self.present(expandAndCollapseViewController, animated: true)
     }
     

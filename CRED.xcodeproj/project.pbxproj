@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1175B272B17D16000F432FB /* ExpandAndCollapse+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1175B262B17D16000F432FB /* ExpandAndCollapse+TableView.swift */; };
 		E125568E2B14E878008B43E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125568D2B14E878008B43E4 /* AppDelegate.swift */; };
 		E12556902B14E878008B43E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E125568F2B14E878008B43E4 /* SceneDelegate.swift */; };
 		E12556972B14E87A008B43E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12556962B14E87A008B43E4 /* Assets.xcassets */; };
@@ -18,7 +19,6 @@
 		E12556BD2B14F332008B43E4 /* PlanCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12556BB2B14F332008B43E4 /* PlanCollectionViewCell.swift */; };
 		E12556BE2B14F332008B43E4 /* PlanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */; };
 		E188B5F02B1752C000F11C7A /* ExpandableTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E188B5EF2B1752C000F11C7A /* ExpandableTwoViewController.swift */; };
-		E188B5F22B17540800F11C7A /* ExpandableThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E188B5F12B17540800F11C7A /* ExpandableThreeViewController.swift */; };
 		E188B5F52B176EF200F11C7A /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E188B5F32B176EF200F11C7A /* HeaderTableViewCell.swift */; };
 		E188B5F62B176EF200F11C7A /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E188B5F42B176EF200F11C7A /* HeaderTableViewCell.xib */; };
 		E188B5F82B1782F400F11C7A /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E188B5F72B1782F400F11C7A /* FinalViewController.swift */; };
@@ -26,7 +26,6 @@
 		E18B3A9C2B16171A00302C96 /* PlansTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E18B3A9A2B16171A00302C96 /* PlansTableViewCell.xib */; };
 		E1C9F42D2B15ED6A007DDDF5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C9F42C2B15ED6A007DDDF5 /* BaseViewController.swift */; };
 		E1C9F4302B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C9F42F2B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift */; };
-		E1C9F4322B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1C9F4312B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard */; };
 		E1C9F4362B15F63D007DDDF5 /* CreditAmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C9F4342B15F63D007DDDF5 /* CreditAmountTableViewCell.swift */; };
 		E1C9F4372B15F63D007DDDF5 /* CreditAmountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1C9F4352B15F63D007DDDF5 /* CreditAmountTableViewCell.xib */; };
 		E1D3869C2B1624130066E83F /* ButtonClipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D3869A2B1624130066E83F /* ButtonClipTableViewCell.swift */; };
@@ -36,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1175B262B17D16000F432FB /* ExpandAndCollapse+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpandAndCollapse+TableView.swift"; sourceTree = "<group>"; };
 		E125568A2B14E878008B43E4 /* CRED.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRED.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E125568D2B14E878008B43E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E125568F2B14E878008B43E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +49,6 @@
 		E12556BB2B14F332008B43E4 /* PlanCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanCollectionViewCell.swift; sourceTree = "<group>"; };
 		E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanCollectionViewCell.xib; sourceTree = "<group>"; };
 		E188B5EF2B1752C000F11C7A /* ExpandableTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTwoViewController.swift; sourceTree = "<group>"; };
-		E188B5F12B17540800F11C7A /* ExpandableThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableThreeViewController.swift; sourceTree = "<group>"; };
 		E188B5F32B176EF200F11C7A /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E188B5F42B176EF200F11C7A /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		E188B5F72B1782F400F11C7A /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +56,6 @@
 		E18B3A9A2B16171A00302C96 /* PlansTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlansTableViewCell.xib; sourceTree = "<group>"; };
 		E1C9F42C2B15ED6A007DDDF5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E1C9F42F2B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandAndCollapseViewController.swift; sourceTree = "<group>"; };
-		E1C9F4312B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpandAndCollapse.storyboard; sourceTree = "<group>"; };
 		E1C9F4342B15F63D007DDDF5 /* CreditAmountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditAmountTableViewCell.swift; sourceTree = "<group>"; };
 		E1C9F4352B15F63D007DDDF5 /* CreditAmountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditAmountTableViewCell.xib; sourceTree = "<group>"; };
 		E1D3869A2B1624130066E83F /* ButtonClipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClipTableViewCell.swift; sourceTree = "<group>"; };
@@ -77,6 +75,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1175B252B17CF2B00F432FB /* Final Destination */ = {
+			isa = PBXGroup;
+			children = (
+				E188B5F72B1782F400F11C7A /* FinalViewController.swift */,
+			);
+			path = "Final Destination";
+			sourceTree = "<group>";
+		};
+		E1175B282B17D29200F432FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1C9F42F2B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift */,
+				E1175B262B17D16000F432FB /* ExpandAndCollapse+TableView.swift */,
+				E12556BF2B14F336008B43E4 /* Collection Cells */,
+				E1C9F4382B15F644007DDDF5 /* Table Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E12556812B14E878008B43E4 = {
 			isa = PBXGroup;
 			children = (
@@ -111,8 +128,7 @@
 				E12556BA2B14F2FA008B43E4 /* Home */,
 				E1C9F4332B15F4AE007DDDF5 /* Expand & Collapse */,
 				E188B5EF2B1752C000F11C7A /* ExpandableTwoViewController.swift */,
-				E188B5F12B17540800F11C7A /* ExpandableThreeViewController.swift */,
-				E188B5F72B1782F400F11C7A /* FinalViewController.swift */,
+				E1175B252B17CF2B00F432FB /* Final Destination */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -166,10 +182,7 @@
 		E1C9F4332B15F4AE007DDDF5 /* Expand & Collapse */ = {
 			isa = PBXGroup;
 			children = (
-				E1C9F42F2B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift */,
-				E1C9F4312B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard */,
-				E12556BF2B14F336008B43E4 /* Collection Cells */,
-				E1C9F4382B15F644007DDDF5 /* Table Cell */,
+				E1175B282B17D29200F432FB /* Views */,
 			);
 			path = "Expand & Collapse";
 			sourceTree = "<group>";
@@ -251,7 +264,6 @@
 			files = (
 				E18B3A9C2B16171A00302C96 /* PlansTableViewCell.xib in Resources */,
 				E12556BE2B14F332008B43E4 /* PlanCollectionViewCell.xib in Resources */,
-				E1C9F4322B15F3C2007DDDF5 /* ExpandAndCollapse.storyboard in Resources */,
 				E1D386A12B16281D0066E83F /* BankInfoTableViewCell.xib in Resources */,
 				E12556B32B14F034008B43E4 /* Color Palette.xcassets in Resources */,
 				E12556B72B14F20B008B43E4 /* Home.storyboard in Resources */,
@@ -276,12 +288,12 @@
 				E1C9F4302B15F3B3007DDDF5 /* ExpandAndCollapseViewController.swift in Sources */,
 				E1C9F4362B15F63D007DDDF5 /* CreditAmountTableViewCell.swift in Sources */,
 				E18B3A9B2B16171A00302C96 /* PlansTableViewCell.swift in Sources */,
-				E188B5F22B17540800F11C7A /* ExpandableThreeViewController.swift in Sources */,
 				E12556B52B14F204008B43E4 /* HomeViewController.swift in Sources */,
 				E188B5F02B1752C000F11C7A /* ExpandableTwoViewController.swift in Sources */,
 				E1D386A02B16281D0066E83F /* BankInfoTableViewCell.swift in Sources */,
 				E188B5F82B1782F400F11C7A /* FinalViewController.swift in Sources */,
 				E188B5F52B176EF200F11C7A /* HeaderTableViewCell.swift in Sources */,
+				E1175B272B17D16000F432FB /* ExpandAndCollapse+TableView.swift in Sources */,
 				E1D3869C2B1624130066E83F /* ButtonClipTableViewCell.swift in Sources */,
 				E12556B92B14F2A8008B43E4 /* Constants.swift in Sources */,
 				E1C9F42D2B15ED6A007DDDF5 /* BaseViewController.swift in Sources */,
