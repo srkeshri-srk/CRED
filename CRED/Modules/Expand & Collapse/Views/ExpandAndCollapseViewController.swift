@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExpandAndCollapseViewController: BaseViewController {
+class ExpandAndCollapseViewController: UIViewController {
     
     //MARK: - UI Components
     lazy var dismissButton: UIButton = {
@@ -59,6 +59,7 @@ class ExpandAndCollapseViewController: BaseViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0)
         button.layer.cornerRadius = 8
         button.clipsToBounds = true
+        button.tag = 3
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -91,7 +92,7 @@ class ExpandAndCollapseViewController: BaseViewController {
     
     //MARK: - Variables
     var defaultHeight: CGFloat = UIScreen.main.bounds.size.height - 150
-    let maxDimmedAlpha: CGFloat = 0.6
+    var maxDimmedAlpha: CGFloat = 0.6
     var containerViewHeightConstraint: NSLayoutConstraint?
     var containerViewBottomConstraint: NSLayoutConstraint?
     var viewModel: ExpandAndCollapseProtocol = ExpandAndCollapseViewModel()
@@ -132,11 +133,21 @@ class ExpandAndCollapseViewController: BaseViewController {
     }
     
     
-    @objc func ctaButtonAction() {
-//        let vc = ExpandableTwoViewController()
-//        vc.defaultHeight = 600
-//        vc.modalPresentationStyle = .overCurrentContext
-//        self.present(vc, animated: false)
+    @objc func ctaButtonAction(sender: UIButton) {
+        if sender.tag > 1 {
+            let expandAndCollapseVC = ExpandAndCollapseViewController()
+            expandAndCollapseVC.defaultHeight = defaultHeight - 100
+            expandAndCollapseVC.viewModel.setupSecondVC()
+            expandAndCollapseVC.modalPresentationStyle = .overCurrentContext
+            expandAndCollapseVC.buttonContainerStackView.isHidden = true
+            expandAndCollapseVC.maxDimmedAlpha = maxDimmedAlpha - 0.1
+            expandAndCollapseVC.ctaButton.tag = ctaButton.tag - 1
+            self.present(expandAndCollapseVC, animated: false)
+        } else {
+            let finalVC = FinalViewController()
+            finalVC.modalPresentationStyle = .overFullScreen
+            self.present(finalVC, animated: true)
+        }
     }
     
     @objc func handleCloseAction() {

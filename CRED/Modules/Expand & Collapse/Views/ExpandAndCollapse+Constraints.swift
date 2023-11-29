@@ -11,6 +11,8 @@ import UIKit
 //MARK: - UI & Constraints
 extension ExpandAndCollapseViewController {
     func setupUI() {
+        view.backgroundColor = .clear
+        
         dismissButton.layer.cornerRadius = dismissButton.bounds.size.height / 2
         suggestionButton.layer.cornerRadius = suggestionButton.bounds.size.height / 2
         
@@ -21,6 +23,7 @@ extension ExpandAndCollapseViewController {
         dismissButton.addTarget(self, action: #selector(dismissButtonAction), for: .touchUpInside)
         suggestionButton.addTarget(self, action: #selector(suggestionButtonAction), for: .touchUpInside)
         ctaButton.addTarget(self, action: #selector(ctaButtonAction), for: .touchUpInside)
+        dimmedView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleCloseAction)))
     }
     
     func setupConstraints() {
