@@ -22,6 +22,7 @@
 		E12556BE2B14F332008B43E4 /* PlanCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E12556BC2B14F332008B43E4 /* PlanCollectionViewCell.xib */; };
 		E17FFD072B17E5C9006F41B7 /* ExpandAndCollapse+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17FFD062B17E5C9006F41B7 /* ExpandAndCollapse+Constraints.swift */; };
 		E17FFD092B17E5EF006F41B7 /* ExpandAndCollapse+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17FFD082B17E5EF006F41B7 /* ExpandAndCollapse+Animations.swift */; };
+		E17FFD0C2B17F44B006F41B7 /* HGCircularSlider in Frameworks */ = {isa = PBXBuildFile; productRef = E17FFD0B2B17F44B006F41B7 /* HGCircularSlider */; };
 		E188B5F52B176EF200F11C7A /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E188B5F32B176EF200F11C7A /* HeaderTableViewCell.swift */; };
 		E188B5F62B176EF200F11C7A /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E188B5F42B176EF200F11C7A /* HeaderTableViewCell.xib */; };
 		E188B5F82B1782F400F11C7A /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E188B5F72B1782F400F11C7A /* FinalViewController.swift */; };
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17FFD0C2B17F44B006F41B7 /* HGCircularSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +247,9 @@
 			dependencies = (
 			);
 			name = CRED;
+			packageProductDependencies = (
+				E17FFD0B2B17F44B006F41B7 /* HGCircularSlider */,
+			);
 			productName = CRED;
 			productReference = E125568A2B14E878008B43E4 /* CRED.app */;
 			productType = "com.apple.product-type.application";
@@ -273,6 +278,9 @@
 				Base,
 			);
 			mainGroup = E12556812B14E878008B43E4;
+			packageReferences = (
+				E17FFD0A2B17F44B006F41B7 /* XCRemoteSwiftPackageReference "HGCircularSlider" */,
+			);
 			productRefGroup = E125568B2B14E878008B43E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -539,6 +547,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E17FFD0A2B17F44B006F41B7 /* XCRemoteSwiftPackageReference "HGCircularSlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:HamzaGhazouani/HGCircularSlider.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E17FFD0B2B17F44B006F41B7 /* HGCircularSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E17FFD0A2B17F44B006F41B7 /* XCRemoteSwiftPackageReference "HGCircularSlider" */;
+			productName = HGCircularSlider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E12556822B14E878008B43E4 /* Project object */;
 }
