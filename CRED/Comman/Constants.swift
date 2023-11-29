@@ -40,6 +40,15 @@ struct Constants {
         }
     }
     
+    //MARK: - Final
+    struct Final {
+        static let message = """
+                    F  I  N  A  L
+                    D E S T I N A T I O N
+                    """
+        static let buttonTitle = "back to pavilion"
+    }
+    
     //MARK: - Alert Message
     struct AlertMessage {
         struct Suggetion {

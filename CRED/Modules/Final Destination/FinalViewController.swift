@@ -11,10 +11,7 @@ class FinalViewController: BaseViewController {
     
     lazy var label: UILabel = {
         let label = UILabel()
-        label.text = """
-                    F  I  N  A  L
-                    D E S T I N A T I O N
-                    """
+        label.text = Constants.Final.message
         label.font = UIFont.systemFont(ofSize: 34.0)
         label.textColor = .white
         label.textAlignment = .center
@@ -25,7 +22,7 @@ class FinalViewController: BaseViewController {
     
     lazy var button: UIButton = {
         let button = UIButton()
-        button.setTitle("back to pavilion", for: .normal)
+        button.setTitle(Constants.Final.buttonTitle, for: .normal)
         button.setTitleColor(.vampireBlack, for: .normal)
         button.backgroundColor = .white
         button.layer.cornerRadius = 8
