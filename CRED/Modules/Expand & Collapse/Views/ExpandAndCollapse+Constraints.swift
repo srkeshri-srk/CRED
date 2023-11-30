@@ -19,10 +19,10 @@ extension ExpandAndCollapseViewController {
     }
     
     func setButtonTarget() {
-        dismissButton.addTarget(self, action: #selector(dismissButtonAction), for: .touchUpInside)
+        dismissButton.addTarget(self, action: #selector(handleCloseAction), for: .touchUpInside)
         suggestionButton.addTarget(self, action: #selector(suggestionButtonAction), for: .touchUpInside)
         ctaButton.addTarget(self, action: #selector(ctaButtonAction), for: .touchUpInside)
-        dimmedView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleCloseAction)))
+        dimmedView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleCloseAction)))
     }
     
     func setupConstraints() {

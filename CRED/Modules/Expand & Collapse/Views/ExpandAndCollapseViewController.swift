@@ -7,8 +7,15 @@
 
 import UIKit
 
+
+protocol ExpandAndCollapseViewControllerDelegate: AnyObject {
+    func willDismiss()
+    func didDismiss()
+}
+
+
 class ExpandAndCollapseViewController: UIViewController {
-    
+        
     //MARK: - UI Components
     lazy var dismissButton: UIButton = {
         let button = UIButton()
@@ -51,12 +58,12 @@ class ExpandAndCollapseViewController: UIViewController {
         return tableView
     }()
     
-    
     lazy var ctaButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .policeBlue
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 17.0)
+        button.titleLabel?.isUserInteractionEnabled = false
         button.layer.cornerRadius = 8
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -89,13 +96,14 @@ class ExpandAndCollapseViewController: UIViewController {
         return view
     }()
     
+    
     //MARK: - Variables
     var defaultHeight: CGFloat = UIScreen.main.bounds.size.height - 150
     var maxDimmedAlpha: CGFloat = 0.6
     var containerViewHeightConstraint: NSLayoutConstraint?
     var containerViewBottomConstraint: NSLayoutConstraint?
     var viewModel: ExpandAndCollapseProtocol = ExpandAndCollapseViewModel()
-    
+    weak var delegate: ExpandAndCollapseViewControllerDelegate?
     
     
     //MARK: - Lifecyle
@@ -111,14 +119,11 @@ class ExpandAndCollapseViewController: UIViewController {
         super.viewDidAppear(animated)
         animateShowDimmedView()
         animatePresentContainer()
-        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        print("viewWillAppear  - ", viewModel.currentUIViewNumber)
-                
+                        
         if viewModel.currentUIViewNumber == 3 {
             viewModel.currentUIViewStates.append(.creditAmountExpand)
         } else if viewModel.currentUIViewNumber == 2 {
@@ -128,23 +133,11 @@ class ExpandAndCollapseViewController: UIViewController {
         }
         
         viewModel.currentUIViewNumber -= 1
-        self.tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        print("viewWillDisappear - ", viewModel.currentUIViewNumber, viewModel.currentUIViewStates)
-        
-        if viewModel.currentUIViewNumber == 2 {
-            viewModel.currentUIViewStates.removeAll{ $0 == .creditAmountCollapse }
-            viewModel.currentUIViewStates.append(.creditAmountExpand)
-        } else if viewModel.currentUIViewNumber == 1 {
-            viewModel.currentUIViewStates.removeAll{ $0 == .plansCollapse }
-            viewModel.currentUIViewStates.append(.plansExpand)
-        }
-        
-        tableView.reloadData()
     }
     
     override func viewWillLayoutSubviews() {
@@ -154,8 +147,10 @@ class ExpandAndCollapseViewController: UIViewController {
     
     
     //MARK: - Actions
-    @objc func dismissButtonAction() {
-        self.dismiss(animated: true)
+    @objc func dismissButtonAction(animated: Bool = true) {
+        self.dismiss(animated: animated) { [weak self] in
+            self?.delegate?.didDismiss()
+        }
     }
     
     @objc func suggestionButtonAction() {
@@ -174,9 +169,7 @@ class ExpandAndCollapseViewController: UIViewController {
             viewModel.currentUIViewStates.append(.plansCollapse)
         }
         
-        UIView.animate(withDuration: 0.3) {
-            self.tableView.reloadData()
-        }
+        reloadData()
         
         if viewModel.currentUIViewNumber > 0 {
             //Recursion Here
@@ -186,6 +179,7 @@ class ExpandAndCollapseViewController: UIViewController {
             expandAndCollapseVC.modalPresentationStyle = .overCurrentContext
             expandAndCollapseVC.buttonContainerStackView.isHidden = true
             expandAndCollapseVC.maxDimmedAlpha = maxDimmedAlpha - 0.1
+            expandAndCollapseVC.delegate = self
             self.present(expandAndCollapseVC, animated: false)
         } else {
             let finalVC = FinalViewController()
@@ -197,6 +191,39 @@ class ExpandAndCollapseViewController: UIViewController {
     @objc func handleCloseAction() {
         animateDismissView()
     }
+    
+    func reloadData(subtype: CATransitionSubtype = .fromTop) {
+        let transition = CATransition()
+        transition.type = .push
+        transition.subtype = subtype
+        transition.duration = 0.3
+        transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        transition.fillMode = .forwards
+        tableView.layer.add(transition, forKey: "UITableViewReloadDataAnimationKey")
+        tableView.reloadData()
+    }
+}
+
+extension ExpandAndCollapseViewController: ExpandAndCollapseViewControllerDelegate {
+    func willDismiss() {
+        if viewModel.currentUIViewNumber == 2 {
+            viewModel.currentUIViewStates.removeAll{ $0 == .creditAmountCollapse }
+            viewModel.currentUIViewStates.append(.creditAmountExpand)
+        } else if viewModel.currentUIViewNumber == 1 {
+            viewModel.currentUIViewStates.removeAll{ $0 == .plansCollapse }
+            viewModel.currentUIViewStates.append(.plansExpand)
+        } else {
+            viewModel.currentUIViewStates.removeAll{ $0 == .bankInfoCollapse }
+            viewModel.currentUIViewStates.append(.bankInfoExpand)
+        }
+        reloadData(subtype: .fromBottom)
+    }
+    
+    func didDismiss() {
+        
+    }
+    
+    
 }
 
 extension ExpandAndCollapseViewController: CreditAmountable {
