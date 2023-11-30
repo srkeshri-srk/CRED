@@ -152,6 +152,7 @@ class ExpandAndCollapseViewController: UIViewController {
             
             //Recursion Here
             let expandAndCollapseVC = ExpandAndCollapseViewController()
+            expandAndCollapseVC.viewModel = viewModel
             expandAndCollapseVC.defaultHeight = defaultHeight - 100
             expandAndCollapseVC.modalPresentationStyle = .overCurrentContext
             expandAndCollapseVC.buttonContainerStackView.isHidden = true

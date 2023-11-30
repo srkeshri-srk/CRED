@@ -18,9 +18,9 @@ extension ExpandAndCollapseViewController: UITableViewDelegate, UITableViewDataS
         let cellType = viewModel.cellTypes[indexPath.row]
         
         switch cellType {
-        case .header(let info, let isDownButton):
+        case .header(let info, let isDownButton, let font):
             let cell: HeaderTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.headerCell.rawValue, for: indexPath) as! HeaderTableViewCell
-            cell.configureUI(info: info, isDownButton: isDownButton ?? true)
+            cell.configureUI(info: info, isDownButton: isDownButton ?? true, font: font)
             return cell
         case .creditAmount:
             let cell: CreditAmountTableViewCell = tableView.dequeueReusableCell(withIdentifier: ExpandAndCollapseModel.TableView.creditAmountCell.rawValue, for: indexPath) as! CreditAmountTableViewCell

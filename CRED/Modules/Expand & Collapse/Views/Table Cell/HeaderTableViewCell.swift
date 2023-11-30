@@ -31,9 +31,12 @@ class HeaderTableViewCell: UITableViewCell {
         downButton.isHidden = true
     }
     
-    func configureUI(info: HeaderInfo, isDownButton: Bool = true) {
+    func configureUI(info: HeaderInfo, isDownButton: Bool = true, font: (title: UIFont, subTitle: UIFont)) {
         titleLabel.text = info.titleText
         subTitleLabel.text = info.subTitleText
         downButton.isHidden = isDownButton
+        
+        titleLabel.font = font.title
+        subTitleLabel.font = font.subTitle
     }
 }
