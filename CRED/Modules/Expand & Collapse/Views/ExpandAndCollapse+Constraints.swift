@@ -12,8 +12,6 @@ import UIKit
 extension ExpandAndCollapseViewController {
     func setupUI() {
         view.backgroundColor = .clear
-        viewModel.buttonTag = ctaButton.tag
-        viewModel.setupExpandUI()
         ctaButton.setTitle(viewModel.ctaButtonTitle, for: .normal)
 
         dismissButton.layer.cornerRadius = dismissButton.bounds.size.height / 2

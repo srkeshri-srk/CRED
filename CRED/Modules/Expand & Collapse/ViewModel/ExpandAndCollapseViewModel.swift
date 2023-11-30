@@ -31,49 +31,59 @@ enum TableCell {
     }
 }
 
+enum UIViewState {
+    case creditAmountExpand
+    case plansExpand
+    case bankInfoExpand
+    case creditAmountCollapse
+    case plansCollapse
+    case bankInfoCollapse
+}
+
 protocol ExpandAndCollapseProtocol {
     var cellTypes: [TableCell] { get set }
     var ctaButtonTitle: String? { get set }
-    var buttonTag: Int { get set }
+    var currentUIViewStates: [UIViewState] { get set }
+    var currentUIViewNumber: Int { get set }
     var creditAmount: CGFloat { get set }
-    
-    func setupExpandUI()
-    func setupCollapseUI()
-    
 }
 
 class ExpandAndCollapseViewModel: ExpandAndCollapseProtocol {
+    
     //MARK: - Variables
     var cellTypes: [TableCell] = []
     var ctaButtonTitle: String?
-    var buttonTag: Int = 0
     var creditAmount: CGFloat = 0
-    
-    private let expandFont = (UIFont.systemFont(ofSize: 20.0), UIFont.systemFont(ofSize: 13.0))
-    private let collapseFont = (UIFont.systemFont(ofSize: 15.0),UIFont.systemFont(ofSize: 28.0))
-
-    
-    //MARK: - Methods
-    func setupExpandUI() {
-        if buttonTag == 3 {
-            setupExpandUIForFirstVC()
-        } else if buttonTag == 2 {
-            setupExpandUIForSecondVC()
-        } else {
-            setupExpandUIForThirdVC()
+    var currentUIViewNumber: Int = 3
+    var currentUIViewStates: [UIViewState] = [] {
+        didSet {
+            setupUI()
         }
     }
     
-    func setupCollapseUI() {
-//        if buttonTag == 2 {
-            setupCollapseUIForFirstVC()
-//        } else if buttonTag == 1 {
-//            setupCollapseUIForSecondVC()
-//        } else {
-//            setupCollapseUIForThirdVC()
-//        }
-    }
+    private let expandFont = (UIFont.systemFont(ofSize: 20.0), UIFont.systemFont(ofSize: 13.0))
+    private let collapseFont = (UIFont.systemFont(ofSize: 15.0),UIFont.systemFont(ofSize: 25.0))
+
     
+    //MARK: - Methods
+    func setupUI() {
+        currentUIViewStates.forEach { currentUIViewState in
+            switch currentUIViewState {
+            case .creditAmountExpand:
+                setupExpandUIForFirstVC()
+            case .plansExpand:
+                setupExpandUIForSecondVC()
+            case .bankInfoExpand:
+                setupExpandUIForThirdVC()
+            case .creditAmountCollapse:
+                setupCollapseUIForFirstVC()
+            case .plansCollapse:
+                setupCollapseUIForSecondVC()
+            case .bankInfoCollapse:
+                setupCollapseUIForThirdVC()
+            }
+        }
+    }
     
     private func setupExpandUIForFirstVC() {
         cellTypes.removeAll()
@@ -105,7 +115,7 @@ class ExpandAndCollapseViewModel: ExpandAndCollapseProtocol {
     
     private func setupCollapseUIForSecondVC() {
         cellTypes.removeAll()
-        cellTypes.append(.header(info: Constants.ExpandAndCollapse.SecondView.headerInfo, isDownButton: false, font: collapseFont))
+        cellTypes.append(.header(info: HeaderInfo(titleText: "EMI", subTitleText: "₹4,247 /mo"), isDownButton: false, font: collapseFont))
     }
     
     private func setupCollapseUIForThirdVC() {

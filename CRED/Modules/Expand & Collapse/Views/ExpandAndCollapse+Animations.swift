@@ -29,6 +29,14 @@ extension ExpandAndCollapseViewController {
         UIView.animate(withDuration: 0.4) {
             self.dimmedView.alpha = 0
         } completion: { _ in
+            self.viewModel.currentUIViewNumber += 1
+
+//            if self.viewModel.currentUIViewNumber == 1 {
+//                self.viewModel.currentUIViewStates.removeAll{ $0 == .creditAmountCollapse }
+//            } else {
+//                self.viewModel.currentUIViewStates.removeAll{ $0 == .plansCollapse }
+//            }
+            
             self.dismiss(animated: false)
         }
         

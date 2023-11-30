@@ -59,7 +59,6 @@ class ExpandAndCollapseViewController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 17.0)
         button.layer.cornerRadius = 8
         button.clipsToBounds = true
-        button.tag = 3
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -112,16 +111,40 @@ class ExpandAndCollapseViewController: UIViewController {
         super.viewDidAppear(animated)
         animateShowDimmedView()
         animatePresentContainer()
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
+        
+        print("viewWillAppear  - ", viewModel.currentUIViewNumber)
+                
+        if viewModel.currentUIViewNumber == 3 {
+            viewModel.currentUIViewStates.append(.creditAmountExpand)
+        } else if viewModel.currentUIViewNumber == 2 {
+            viewModel.currentUIViewStates.append(.plansExpand)
+        } else {
+            viewModel.currentUIViewStates.append(.bankInfoExpand)
+        }
+        
+        viewModel.currentUIViewNumber -= 1
+        self.tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("viewWillDisappear")
+        
+        print("viewWillDisappear - ", viewModel.currentUIViewNumber, viewModel.currentUIViewStates)
+        
+        if viewModel.currentUIViewNumber == 2 {
+            viewModel.currentUIViewStates.removeAll{ $0 == .creditAmountCollapse }
+            viewModel.currentUIViewStates.append(.creditAmountExpand)
+        } else if viewModel.currentUIViewNumber == 1 {
+            viewModel.currentUIViewStates.removeAll{ $0 == .plansCollapse }
+            viewModel.currentUIViewStates.append(.plansExpand)
+        }
+        
+        tableView.reloadData()
     }
     
     override func viewWillLayoutSubviews() {
@@ -142,14 +165,20 @@ class ExpandAndCollapseViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    
     @objc func ctaButtonAction(sender: UIButton) {
-        if sender.tag > 1 {
-            UIView.animate(withDuration: 0.1) {
-                self.viewModel.setupCollapseUI()
-                self.tableView.reloadData()
-            }
-            
+        if viewModel.currentUIViewNumber == 2 {
+            viewModel.currentUIViewStates.removeAll{ $0 == .creditAmountExpand }
+            viewModel.currentUIViewStates.append(.creditAmountCollapse)
+        } else if viewModel.currentUIViewNumber == 1 {
+            viewModel.currentUIViewStates.removeAll{ $0 == .plansExpand }
+            viewModel.currentUIViewStates.append(.plansCollapse)
+        }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.tableView.reloadData()
+        }
+        
+        if viewModel.currentUIViewNumber > 0 {
             //Recursion Here
             let expandAndCollapseVC = ExpandAndCollapseViewController()
             expandAndCollapseVC.viewModel = viewModel
@@ -157,7 +186,6 @@ class ExpandAndCollapseViewController: UIViewController {
             expandAndCollapseVC.modalPresentationStyle = .overCurrentContext
             expandAndCollapseVC.buttonContainerStackView.isHidden = true
             expandAndCollapseVC.maxDimmedAlpha = maxDimmedAlpha - 0.1
-            expandAndCollapseVC.ctaButton.tag = ctaButton.tag - 1
             self.present(expandAndCollapseVC, animated: false)
         } else {
             let finalVC = FinalViewController()
