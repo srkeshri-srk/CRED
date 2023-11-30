@@ -114,6 +114,16 @@ class ExpandAndCollapseViewController: UIViewController {
         animatePresentContainer()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("viewWillDisappear")
+    }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         setupUI()
@@ -135,6 +145,12 @@ class ExpandAndCollapseViewController: UIViewController {
     
     @objc func ctaButtonAction(sender: UIButton) {
         if sender.tag > 1 {
+            UIView.animate(withDuration: 0.1) {
+                self.viewModel.setupCollapseUI()
+                self.tableView.reloadData()
+            }
+            
+            //Recursion Here
             let expandAndCollapseVC = ExpandAndCollapseViewController()
             expandAndCollapseVC.defaultHeight = defaultHeight - 100
             expandAndCollapseVC.modalPresentationStyle = .overCurrentContext
@@ -156,7 +172,7 @@ class ExpandAndCollapseViewController: UIViewController {
 
 extension ExpandAndCollapseViewController: CreditAmountable {
     func sliderValueChanged(value: CGFloat) {
-        print(value)
+        viewModel.creditAmount = value
     }
 }
 
