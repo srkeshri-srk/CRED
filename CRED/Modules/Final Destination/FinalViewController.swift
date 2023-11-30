@@ -54,7 +54,7 @@ class FinalViewController: BaseViewController {
     }
     
     @objc func handleButtonTapAction() {
-        self.dismiss(animated: true)
+        self.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
     }
 
 

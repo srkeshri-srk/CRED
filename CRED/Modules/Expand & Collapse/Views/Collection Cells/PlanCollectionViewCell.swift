@@ -20,7 +20,7 @@ class PlanCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var selectionButton: UIButton!
     @IBOutlet weak var seeCalculationsButton: UIButton!
     
-    let colorPalettes: [UIColor] = [.charlestonGreen, .cola, .crayola, .deer, .jacarta, .policeBlue]
+    let colorPalettes: [UIColor] = [.charlestonGreen, .cola, .crayola, .jacarta, .policeBlue]
     weak var delegate: PlanCalulationable?
     
     override func awakeFromNib() {
